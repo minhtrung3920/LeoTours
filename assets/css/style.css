@@ -1,0 +1,111 @@
+/* Resset CSS */
+* {
+    /* Emet */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* serif: lay dai 1 font nao tren may */
+
+/* từ ngòai vào trong, từ trên xuống dưới
+vi tri 
+kih thuoc (width, height)
+mau sac
+kieu dang (kiểu chữ, tròn, vuông...)
+*/
+
+#main_wrapper {
+
+}
+
+#header{
+    height: 46px;
+    background: rgb(0,65,106);
+    background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(121,159,12,1) 37%, rgba(0,65,106,1) 100%);
+}
+
+#nav{
+    display: inline-block;
+}
+#nav, .subnav {
+    list-style: none;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+/* a phai la con truc tiep cua li, li truc tiep cua nav */
+#nav > ul > li > a{
+    color: honeydew;
+    text-transform: uppercase;
+}
+#nav li a{
+    color: honeydew;
+    text-decoration: none;
+    font-style: oblique;
+    font-weight: bolder;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: block;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav li:hover > a{
+    color: black;
+    /* background-color: chocolate; */
+}
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 150px;
+    box-shadow: 0 0 10px black;
+}
+#nav .subnav a{
+    color: black;
+}
+#nav .subnav li:hover a{
+    color: rgb(255, 255, 255);
+    background: rgb(0,65,106);
+    background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(228,229,230,1) 100%);
+}
+#nav .subnav li{
+    width: 150px;
+}
+#nav .nav-arrow-down{
+    font-size: 15px;
+}
+#header .search-btn{
+    float: right;
+    padding: 0 35px;
+}
+#header .search-btn:hover{
+    background: rgb(0,65,106);
+    background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(228,229,230,1) 100%);
+    cursor: pointer;
+}
+#header .search-icon{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider{
+
+}
+#content{
+
+}
+
+
+#footer{
+
+
+}
+
