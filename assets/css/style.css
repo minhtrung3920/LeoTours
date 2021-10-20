@@ -18,6 +18,9 @@ kih thuoc (width, height)
 mau sac
 kieu dang (kiểu chữ, tròn, vuông...)
 */
+.text-white {
+    color: #fff !important;
+}
 
 #main_wrapper {
 
@@ -27,6 +30,11 @@ kieu dang (kiểu chữ, tròn, vuông...)
     height: 46px;
     background: rgb(0,65,106);
     background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(121,159,12,1) 37%, rgba(0,65,106,1) 100%);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 #nav{
@@ -97,15 +105,311 @@ kieu dang (kiểu chữ, tròn, vuông...)
 }
 
 #slider{
-
+    margin-top: 46px;
+    padding-top: 50%; 
+    /* padding top => chiều rộng = 50% cao */
+    background: url('../image/leopard.jpg') top center / cover no-repeat;
+    position: relative;
 }
+#slider .text-content { 
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    color: rgb(5, 5, 5);
+    background-color: rgb(180, 179, 179);
+    opacity: 0.8;
+    width: 100%;
+    /* căn giữa  */
+    transform: translateX(-50%);
+    text-align: center;
+}
+#slider .text-heading { 
+    font-weight: bolder;
+    font-size: 20px;
+}
+#slider .text-descrip { 
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
 #content{
 
 }
+#content .content-section {
+    width: 800px;
+    padding: 64px 0 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heeading,
+#content .section-sub-heading {
+    text-align: center;
+}
+#content .section-heeading {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 12px;
+}
+#content .section-sub-heading {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 25px;
+    opacity: 0.7;
+}
+#content .about-text {
+    font-size: 18px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .memeber-list {
+    /* display: inline-block;  */
+    /* chinh float left khong dc nen dung display */
+    /* margin: 48px 33.33333px 50px 33.33333px; */
+    margin-top: 48px;
+    text-align: center;
 
+}
+#content .member-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    /* margin: 48px 33.33333px 50px 33.33333px; */
+    /* width: 33.33333%; */
+}
+#content .member-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+#content .member-avatar {
+    width: 260px;
+    height: 280px;
+    margin-top: 15px;
+    border-radius: 10px;
+} 
+/* ----------------------------------------------------------------- */
+.clear {
+    clear: both;
+    /* phần tử con mà float thì 
+    phân tử cha ko ôm trọn dược nên dùng clear */
+}
+
+/* ----------------------------------------------------tour-section */
+.tour-section {
+    /* background-color: #000; */
+    background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(121,159,12,1) 37%, rgba(0,65,106,1) 100%);
+
+}
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+
+}
+.tickets-list li {
+    color: #757577;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets-list .sold-out {
+    background-color: brown;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quanlity {
+    float: right;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    margin-top: -3px;
+}
+
+/* ------------------------------------------ */
+.place-list {
+    margin-top: 32px;
+    padding: 0 8px;
+    margin-left: -10px;
+    margin-right: -80px;
+    padding-bottom: 30px;
+}
+.place-items {
+    /* float: left;
+    width: 33%;
+    border-radius: 35px; */
+    float: left;
+    width: 28.8%;
+    border-radius: 35px;
+    margin-right: 24px;
+}
+.place-img {
+    /* width: 78%; */
+    /* 100% để nó bằng với thẻ chứa nó */
+    width: 100%;
+    height: 160px;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.6;
+}
+.place-body {
+    background-color: #fff;
+    margin: 0 0px 0 0;
+    padding: 16px;
+    font-size: 16px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.place-heading {
+    font-size: 16px;
+    font-weight: 800;
+}
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+.place-descrip {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-buy-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 12px 16px;
+    margin: 15px 0 0 0;
+    display: inline-block;
+}
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
 
 #footer{
+    background-color: black;
+    height: 500px;
+
+}
 
 
+/* cửa sổ trình duyệt */
+.modal {
+    position: fixed;
+    /* ko cần đặt width height vì có top right left bottom */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    /* cotainer nằm giữa modal */
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    display: none;
+}
+/* js */
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    /* vi tri lien quan de gan nut close */
+    position: relative;
+    animation: modalFadeIn ease .3s;
+}
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal-close {
+    /* an theo the cha là modal-container */
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
+}
+.modal-close:hover {
+    color: #000;
+    opacity: 0.8;
+}
+
+header.modal-head {
+    /* background: rgb(0,65,106); */
+    background: linear-gradient(350deg, rgba(0,65,106,1) 30%, rgba(228,229,230,1) 100%);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    /* căn ngang chiều vertical */
+    justify-content: center;
+    /* căn ngang chiều horizon */
+    font-size: 35px;
+    color: #fff;
+}
+.modal-head > .head-icon{ margin-right: 15px; }
+
+.modal-body {
+    padding: 18px;
+}
+.modal-label {
+    /* vì input cung nam tren 1 hang nen phai cat no ra */
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* margin-top: 30px; */
+}
+.modal-input {
+    border: 2x solid #ccc;
+    padding: 12px;
+    width: 100%;
+    font: 15px;
+    margin-bottom: 30px;
+
+}
+#buy-tickets {
+    background: linear-gradient(20deg, rgba(0,65,106,1) 30%, rgba(228,229,230,1) 100%);
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px;
+    cursor: pointer;
+
+}
+#buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    color: #000;
+}
+.modal-footer {
+    margin-top: 5px;
+    padding: 18px;
+    text-align: right;
+    font-size: 18px;
+}
+.modal-footer a{ 
+    color: crimson;
+}
+@media (max-width: 990px) {
+    .modal-container {
+        max-width: calc(100% - 32px);
+    }
 }
 
