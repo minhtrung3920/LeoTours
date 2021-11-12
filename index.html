@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
-
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
@@ -40,7 +40,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-            <!-- End serch -->            
+            <!-- End serch -->     
+            <div id="mobile-menu-js" class="mobile-menu-btn">
+                <i class="ti-menu"></i>
+            </div>       
         </div>
 <!-- begin slider -->
         <div id="slider">
@@ -256,8 +259,37 @@
             event.stopPropagation()
             // stop nổi bọt từ modal container
         })
+    </script>
 
-    </script>    
+    // ------------headerMobileMenuOpen&Closed
+    <script>
+        var header = document.getElementById('header');
+        var headerMobile = document.getElementById('mobile-menu-js');
+        var headerHeight = header.clientHeight;
+        // console.log(headerMobile);
+        headerMobile.onclick = function() {
+            // console.log(header.clientHeight);
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        };
+
+        // ----------autoClosedMenu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        //---------------------------------------lay tat ca the a trong href
+        for (var i = 0; i < menuItems.length; i++) {
+
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function() {
+                header.style.height = null;
+            }
+        }
+    </script>
+
 </body>
 </html>
 

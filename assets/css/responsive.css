@@ -1,0 +1,21 @@
+/* --------------------------------------computer */
+@media (min-width: 1024px) {
+    .pc {
+    }
+}
+/* --------------------------------------tablet */
+@media (min-width:740px) and (max-width: 1024px) {
+    .tablet {
+    }
+}
+/* --------------------------------------Mobile */
+@media (max-width: 740px) {
+    #nav li {
+        display: block;
+    }
+    #header .search-btn {
+        float: right;
+        padding: 0 35px;
+        display: none;
+    }
+}

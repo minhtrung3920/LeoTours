@@ -80,6 +80,7 @@ kieu dang (kiểu chữ, tròn, vuông...)
     left: 0;
     right: 0;
     z-index: 2;
+    overflow: hidden;
 }
 
 #nav{
@@ -134,15 +135,18 @@ kieu dang (kiểu chữ, tròn, vuông...)
 #nav .nav-arrow-down{
     font-size: 15px;
 }
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 35px;
 }
+#header .mobile-menu-btn,
 #header .search-btn:hover{
     background: rgb(0,65,106);
     background: linear-gradient(37deg, rgba(0,65,106,1) 0%, rgba(228,229,230,1) 100%);
     cursor: pointer;
 }
+#header .mobile-menu-btn,
 #header .search-icon{
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -183,6 +187,7 @@ kieu dang (kiểu chữ, tròn, vuông...)
 }
 #content .content-section {
     width: 800px;
+    /* width: 100%; */
     padding: 64px 0 64px 0;
     margin-left: auto;
     margin-right: auto;
